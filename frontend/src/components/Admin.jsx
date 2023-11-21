@@ -22,6 +22,7 @@ const Admin = () => {
       <th scope="col">NAME</th>
       <th scope="col">EMAIL</th>
       <th scope="col">MESSAGE</th>
+      <th scope="col">IMAGE</th>
     </tr>
   </thead>
   <tbody>
@@ -32,6 +33,7 @@ const Admin = () => {
       <td>{item.name}</td>
       <td>{item.email}</td>
       <td>{item.message}</td>
+      <td><img src={item.imageUrl} width={"100px"} height={"100px"} alt={item.name}/></td>
     </tr>
         )
     })}

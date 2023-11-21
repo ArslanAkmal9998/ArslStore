@@ -13,6 +13,10 @@ const contactSchema=mongoose.Schema({
     message:{
         type:String,
         default:""
+    },
+    imageUrl:{
+        type:String,
+        default:""
     }
 },
 {timestamps:true}

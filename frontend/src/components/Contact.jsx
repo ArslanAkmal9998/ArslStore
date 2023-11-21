@@ -7,7 +7,8 @@ const Contact = () => {
   const [formData,setFormData]=useState({
     name:"",
     email:"",
-    message:""
+    message:"",
+    imageUrl:""
   })
   const navigate=useNavigate();
 const onChange=(e)=>{
@@ -20,7 +21,8 @@ console.log(data)
 setFormData({
   name:"",
   email:"",
-  message:""
+  message:"",
+  imageUrl:""
 })
 
 toast.success('🦄 Wow so easy!', {
@@ -44,7 +46,7 @@ setTimeout(()=>{
 
 
 }
-const {name,email,message}=formData;
+const {name,email,message,imageUrl}=formData;
   return (
     <form className='d-flex justify-content-center align-items-center flex-column' onSubmit={onSubmit} >
        <div class="mb-3 w-50">
@@ -58,6 +60,10 @@ const {name,email,message}=formData;
 <div class="mb-3 w-50">
   <label for="exampleFormControlTextarea1" class="form-label">Message:</label>
   <textarea class="form-control" name="message" value={message} onChange={onChange} id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+<div class="mb-3 w-50">
+  <label for="exampleFormControlInput1" class="form-label">Image Url:</label>
+  <input type="text" name="imageUrl" value={imageUrl} onChange={onChange} class="form-control" id="exampleFormControlInput1" placeholder="Enter Image Link"/>
 </div>
 <button className="btn btn-primary">Submit</button>
     </form>
