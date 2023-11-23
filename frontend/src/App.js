@@ -10,6 +10,8 @@ import ProductDescription from './components/ProductDescription';
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import Admin from './components/Admin';
+import ContactDetails from './components/ContactDetails';
+
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
   <Route path="/" element={<Home/>}></Route>
   <Route path="/products" element={<Products/>}></Route>
   <Route path="/contact" element={<Contact/>}></Route>
+  <Route path="/contact/:id" element={<ContactDetails/>}></Route>
   <Route path="/about" element={<About/>}></Route>
   <Route path="/products/:id" element={<ProductDescription/>}></Route>
   <Route path="/admin/arsl" element={<Admin/>}></Route>
